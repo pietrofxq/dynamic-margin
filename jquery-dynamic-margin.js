@@ -5,7 +5,7 @@
 
 (function($) {
 
-	$.fn.dynamicMargin = function(options){
+	$.fn.dynamicMargin = function(options) {
 
 		if (options == "disabled") {
 			return;
@@ -16,8 +16,8 @@
 		var settings = $.extend({
 			container: window,
             minMargin: 10,
-            doOnResize: false,
-            doOnResizeAndLoad:false,
+            onResizeWindow: false,
+            onResizeAndLoad:false,
             bodyReset:true
 		}, options);
 
@@ -47,9 +47,9 @@
             });
 		};
         
-        if (settings.doOnResize || settings.doOnResizeAndLoad) {
+        if (settings.onResizeWindow || settings.onResizeAndLoad) {
             var resizeIt = function() {
-                if (settings.doOnResizeAndLoad) {
+                if (settings.onResizeAndLoad) {
                     space();
                 }
                 $(window).resize(function(){
@@ -61,5 +61,6 @@
         
 		return space();	
 	};
+
 })(jQuery);
 

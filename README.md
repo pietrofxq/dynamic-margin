@@ -40,8 +40,8 @@ $(document).ready(function(){
 $('.element').dynamicMargin({
 	container: window,
 	minMargin: 10,
-    doOnResize: false,
-    doOnResizeAndLoad:false,
+    onResizeWindow: false,
+    onResizeAndLoad:false,
     bodyReset:true
 });
 
@@ -64,18 +64,24 @@ minMargin: 10
 This option makes the plugin get fired *only* when the window is resized (true or false).
 
 ```js
-doOnResize: false
+onResizeWindow: false
 ```
 This option is same as the previous, but the plugin is also fired when the page loads
 
 ```js
-doOnResizeAndLoad: false
+onResizeAndLoad: false
 ```
 
 By default, when the container is the window, the plugin automatically sets ```margin:0; padding:0``` to the body, to prevent bugs. You can set this option to false to disable this behavior
 
 ```js
 bodyReset: true
+```
+
+Disable Dynamic Margin
+
+```js
+$('.element').dynamicMargin('disabled');
 ```
 
 ## Feel free to collaborate!
