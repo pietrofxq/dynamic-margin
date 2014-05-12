@@ -11,7 +11,7 @@ jQuery Dynamic Margin positions floated elements dynamically, avoiding blank spa
 
 <img src="example-img.jpg">
 
-or <a href="http://jsfiddle.net/pietrofxq/MTgD6"> CHECK THE LIVE DEMO</a>
+<a href="http://jsfiddle.net/pietrofxq/MTgD6"> CHECK THE LIVE DEMO</a>
 
 ## How to use
 
