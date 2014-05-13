@@ -16,10 +16,10 @@
 
 		var settings = $.extend({
 			container: window,
-		            	minMargin: 10,
-		            	onResizeWindow: false,
-		            	onResizeAndLoad:false,
-		            	bodyReset:true
+	            	minMargin: 10,
+	            	onResizeWindow: false,
+	            	onResizeAndLoad:false,
+	            	bodyReset:true
 		}, options);
 
 		if (settings.bodyReset) {
@@ -35,9 +35,9 @@
 		var space =  function() {
 			var minMargin 	= margin,
 			containerWidth 	= $(container).width(),
-			divWidth = that.width(),
-			qntSquare = Math.floor(containerWidth / (divWidth + minMargin)),
-			rest 	= containerWidth - ((divWidth + minMargin) * qntSquare),
+			divWidth 	= that.width(),
+			qntSquare 	= Math.floor(containerWidth / (divWidth + minMargin)),
+			rest 		= containerWidth - ((divWidth + minMargin) * qntSquare),
 			marginWidth 	= (rest / qntSquare) + minMargin;
 			
             return that.each(function(){
