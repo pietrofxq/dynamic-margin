@@ -1,6 +1,7 @@
-/* jQuery Dynamic Margin
-   Version 1.0
-   Author: github.com/pietrofxq
+/* 
+    jQuery Dynamic Margin
+    Version 1.0
+    Author: github.com/pietrofxq
 */
 
 (function($) {
@@ -41,7 +42,7 @@
 			
             return that.each(function(){
                 $(this).css({
-                    "margin-left": marginWidth/2 + "px",
+                    "margin-left" : marginWidth/2 + "px",
                     "margin-right": marginWidth/2 + "px"
                 });
             });
@@ -58,8 +59,7 @@
             };
             return resizeIt();
         }
-        
-		return space();	
+	   return space();	
 	};
 
 })(jQuery);
