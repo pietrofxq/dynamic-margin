@@ -16,10 +16,10 @@
 
 		var settings = $.extend({
 			container: window,
-            minMargin: 10,
-            onResizeWindow: false,
-            onResizeAndLoad:false,
-            bodyReset:true
+            	minMargin: 10,
+            	onResizeWindow: false,
+            	onResizeAndLoad:false,
+            	bodyReset:true
 		}, options);
 
 		if (settings.bodyReset) {
