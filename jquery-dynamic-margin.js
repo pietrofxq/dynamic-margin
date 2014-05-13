@@ -1,6 +1,7 @@
-/* jQuery Dynamic Margin
-   Version 1.0
-   Author: github.com/pietrofxq
+/* 
+	jQuery Dynamic Margin
+	Version 1.0
+	Author: github.com/pietrofxq
 */
 
 (function($) {
