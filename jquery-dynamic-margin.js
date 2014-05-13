@@ -32,12 +32,12 @@
 			margin = settings.minMargin;
         
 		var space =  function() {
-			var minMargin = margin,
-			containerWidth = $(container).width(),
-			divWidth = that.width(),
-			qntSquare = Math.floor(containerWidth / (divWidth + minMargin)),
-			rest = containerWidth - ((divWidth + minMargin) * qntSquare),
-			marginWidth = (rest / qntSquare) + minMargin;
+			var minMargin 	= margin,
+			containerWidth 	= $(container).width(),
+			divWidth 		= that.width(),
+			qntSquare 		= Math.floor(containerWidth / (divWidth + minMargin)),
+			rest 			= containerWidth - ((divWidth + minMargin) * qntSquare),
+			marginWidth 	= (rest / qntSquare) + minMargin;
 			
             return that.each(function(){
                 $(this).css({
