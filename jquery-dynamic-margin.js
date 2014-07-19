@@ -11,10 +11,8 @@
        var that = $(this);
 
        function destroy() {
-            that.css({
-                "margin-left":"",
-                "margin-right":""
-            });
+            that.removeAttr("margin-right");
+            that.removeAttr("margin-left");
             $(window).off("resize",space);
         }
 
