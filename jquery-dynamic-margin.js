@@ -1,26 +1,37 @@
 /* 
     jQuery Dynamic Margin
-    Version 1.0
+    Version 1.1
     Author: github.com/pietrofxq
 */
 
 (function($) {
 
 	$.fn.dynamicMargin = function(options) {
+       
+       var that = $(this);
 
-		if (options == "disabled") {
-			return;
-		}
-		
-		var that = $(this);
+       function destroy() {
+            that.css({
+                "margin-left":"",
+                "margin-right":""
+            });
+            $(window).off("resize",space);
+        }
 
-		var settings = $.extend({
+
+       switch(options) {
+           case "destroy":
+               return destroy();
+	    }
+
+		var settings = {
 			container: window,
-	            	minMargin: 10,
-	            	onResizeWindow: false,
-	            	onResizeAndLoad:false,
-	            	bodyReset:true
-		}, options);
+            minMargin: 10,
+            onResizeWindow: false,
+            onResizeAndLoad:false,
+            bodyReset:true
+		};
+       
 
 		if (settings.bodyReset) {
 			$("body").css({
@@ -33,16 +44,16 @@
 			margin = settings.minMargin;
         
 		var space =  function() {
-			var minMargin 	= margin,
-			containerWidth 	= $(container).width(),
-			divWidth 	= that.width(),
-			qntSquare 	= Math.floor(containerWidth / (divWidth + minMargin)),
-			rest 		= containerWidth - ((divWidth + minMargin) * qntSquare),
-			marginWidth 	= (rest / qntSquare) + minMargin;
+			var minMargin = margin,
+			containerWidth = $(container).width(),
+			divWidth = that.width(),
+			qntSquare = Math.floor(containerWidth / (divWidth + minMargin)),
+			rest = containerWidth - ((divWidth + minMargin) * qntSquare),
+			marginWidth = (rest / qntSquare) + minMargin;
 			
             return that.each(function(){
                 $(this).css({
-                    "margin-left" : marginWidth/2 + "px",
+                    "margin-left": marginWidth/2 + "px",
                     "margin-right": marginWidth/2 + "px"
                 });
             });
@@ -53,14 +64,13 @@
                 if (settings.onResizeAndLoad) {
                     space();
                 }
-                $(window).resize(function(){
-                    space();
-                });
+                $(window).resize(space);
             };
             return resizeIt();
         }
-	   return space();	
+        
+		return space();	
 	};
 
+    
 })(jQuery);
-

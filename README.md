@@ -81,7 +81,7 @@ bodyReset: true
 Disable Dynamic Margin
 
 ```js
-$('.element').dynamicMargin('disabled');
+$('.element').dynamicMargin('destroy');
 ```
 
 ## Feel free to collaborate!
