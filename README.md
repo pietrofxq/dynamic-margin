@@ -66,16 +66,23 @@ This option makes the plugin get fired *only* when the window is resized (true o
 ```js
 onResizeWindow: false
 ```
-This option is same as the previous, but the plugin is also fired when the page loads
+This option is same as the previous, but the plugin is also fired when the page loads.
 
 ```js
 onResizeAndLoad: false
 ```
 
-By default, when the container is the window, the plugin automatically sets ```margin:0; padding:0``` to the body, to prevent bugs. You can set this option to false to disable this behavior
+By default, when the container is the window, the plugin automatically sets ```margin:0; padding:0``` to the body, to prevent bugs. You can set this option to false to disable this behavior.
 
 ```js
 bodyReset: true
+```
+
+Specific if width of container or element should be calculated taking padding in account. Set these options to true if your container or element have padding.
+
+```js
+outerWidthElement:false,
+outerWidthContainer: false
 ```
 
 Disable Dynamic Margin

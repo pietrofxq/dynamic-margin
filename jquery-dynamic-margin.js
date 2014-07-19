@@ -24,13 +24,15 @@
                return destroy();
 	    }
 
-		var settings = {
+		var settings = $.extend({
 			container: window,
             minMargin: 10,
             onResizeWindow: false,
-            onResizeAndLoad:false,
-            bodyReset:true
-		};
+            onResizeAndLoad:true,
+            bodyReset:true,
+            outerWidthElement:false,
+            outerWidthContainer: false
+		}, options);
        
 
 		if (settings.bodyReset) {
@@ -45,11 +47,14 @@
         
 		var space =  function() {
 			var minMargin = margin,
-			containerWidth = $(container).width(),
-			divWidth = that.width(),
+			containerWidth = settings.outerWidthContainer? $(container).outerWidth() : $(container).width(),
+			divWidth = settings.outerWidthElement ? that.outerWidth() : that.width(),
 			qntSquare = Math.floor(containerWidth / (divWidth + minMargin)),
 			rest = containerWidth - ((divWidth + minMargin) * qntSquare),
 			marginWidth = (rest / qntSquare) + minMargin;
+
+			console.log('container: ' + containerWidth);
+			console.log('element: ' + divWidth);
 			
             return that.each(function(){
                 $(this).css({
@@ -60,13 +65,10 @@
 		};
         
         if (settings.onResizeWindow || settings.onResizeAndLoad) {
-            var resizeIt = function() {
-                if (settings.onResizeAndLoad) {
-                    space();
-                }
-                $(window).resize(space);
-            };
-            return resizeIt();
+        	if(settings.onResizeAndLoad) {
+        		space();
+        	}
+        	$(window).resize(space)
         }
         
 		return space();	
