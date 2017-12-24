@@ -17,17 +17,16 @@ jQuery Dynamic Margin positions floated elements dynamically, avoiding blank spa
 
 ### Notes
 
-By default, the plugin will assume that the container of your elements is the window. Is **crucial** that you define the correct container of your elements, because if you do not, the margin will be calculate in the wrong way and will bug everything.
+By default, the plugin will assume that the container of your elements is the window. Is **crucial** that you define the correct container of your elements, because if you do not, the margin will be calculate in the wrong way things may not work.
 
 ### Basic Usage
 
 ```js
 
 $(document).ready(function(){
-	
-	$('.element').dynamicMargin({
-		container: '.container'
-	});
+    $('.element').dynamicMargin({
+        container: '.container'
+    });
 })
 
 ```
@@ -38,11 +37,11 @@ $(document).ready(function(){
 ```js
 
 $('.element').dynamicMargin({
-	container: window,
-	minMargin: 10,
+    container: window,
+    minMargin: 10,
     onResizeWindow: false,
-    onResizeAndLoad:false,
-    bodyReset:true
+    onResizeAndLoad: false,
+    bodyReset: true
 });
 
 ```
@@ -78,14 +77,14 @@ By default, when the container is the window, the plugin automatically sets ```m
 bodyReset: true
 ```
 
-Specific if width of container or element should be calculated taking padding in account. Set these options to true if your container or element have padding.
+Specify if width of container or element should be calculated taking padding in account. Set these options to true if your container or element have padding.
 
 ```js
-outerWidthElement:false,
+outerWidthElement: false,
 outerWidthContainer: false
 ```
 
-Disable Dynamic Margin
+Destroy Dynamic Margin
 
 ```js
 $('.element').dynamicMargin('destroy');
