@@ -1,11 +1,7 @@
 jQuery Dynamic Margin
 ==============
 
-## Save media queries!
-
-### What is this plugin?
-
-jQuery Dynamic Margin positions floated elements dynamically, avoiding blank spaces on window resize or when the site is loaded on smaller screens.
+jQuery Dynamic Margin helps on positioning floated elements dynamically, avoiding blank spaces on window resize or when the site is loaded on smaller screens.
 
 ### Example
 
@@ -17,7 +13,7 @@ jQuery Dynamic Margin positions floated elements dynamically, avoiding blank spa
 
 ### Notes
 
-By default, the plugin will assume that the container of your elements is the window. Is **crucial** that you define the correct container of your elements, because if you do not, the margin will be calculate in the wrong way things may not work.
+By default, the plugin will assume that the container of your elements is the window. It is **important** that you define the correct container of your elements, because if you do not, the margin will be calculate in the wrong way and things may not work properly.
 
 ### Basic Usage
 
@@ -48,23 +44,24 @@ $('.element').dynamicMargin({
 
 ### Options
 
-This option let you choose the container of the elements that needs the dynamic margin. This is important because the calculation uses the container width in order to work.
+Lets you choose the container of the elements that needs the dynamic margin. This is important because the calculation uses the container width in order to work.
 
 ```js
 container: window
 ```
 
-This option set the minimum margin-left and margin-right to the elements (in px).
+Set the minimum margin-left and margin-right to the elements (in px).
 
 ```js
 minMargin: 10
 ```
 
-This option makes the plugin get fired *only* when the window is resized (true or false).
+Fire the plugin *only* when the window is resized (true or false).
 
 ```js
 onResizeWindow: false
 ```
+
 This option is same as the previous, but the plugin is also fired when the page loads.
 
 ```js
@@ -77,7 +74,7 @@ By default, when the container is the window, the plugin automatically sets ```m
 bodyReset: true
 ```
 
-Specify if width of container or element should be calculated taking padding in account. Set these options to true if your container or element have padding.
+Specify if width of container or element should be calculated taking padding into account. Set these options to true if your container or element has padding.
 
 ```js
 outerWidthElement: false,
